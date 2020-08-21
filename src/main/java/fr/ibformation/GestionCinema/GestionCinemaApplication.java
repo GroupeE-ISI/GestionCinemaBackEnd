@@ -14,7 +14,7 @@ import fr.ibformation.GestionCinema.bean.Film;
 
 @SpringBootApplication
 public class GestionCinemaApplication implements CommandLineRunner{
-	// pour afficher des id cachés
+	// pour afficher des id cachés!,
 	@Autowired
 	private RepositoryRestConfiguration restConfiguration; 
 
