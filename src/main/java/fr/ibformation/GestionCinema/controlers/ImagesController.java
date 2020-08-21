@@ -62,10 +62,11 @@ public class ImagesController {
 	}
 	
 }
+
 @Data
 class  ReservationForm{
 	private String nomClient;
 	private int codeAchat;
 	private List<Integer> reservations = new ArrayList<>();
-}
+} 
 
