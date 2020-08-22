@@ -31,7 +31,7 @@ public class Reservation {
 	private int codeAchat;
 	private double prix;
 	private boolean placeReservee;
-	@ManyToOne
+	@ManyToOne// One to many ? Une réservation peut prendre plusieurs places
 	private Place place;
 	@ManyToOne
 	@JsonProperty(access = Access.WRITE_ONLY)

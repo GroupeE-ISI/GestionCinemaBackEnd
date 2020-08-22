@@ -2,7 +2,6 @@ package fr.ibformation.GestionCinema.bean;
 
 import java.time.LocalDateTime;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -14,8 +13,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
@@ -57,5 +54,4 @@ public class Film {
 	private List<Acteur> acteurs;
 	@ManyToOne
 	private Langage langage;
-
 }
