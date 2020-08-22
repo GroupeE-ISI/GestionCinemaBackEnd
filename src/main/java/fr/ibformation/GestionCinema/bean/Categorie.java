@@ -28,6 +28,6 @@ public class Categorie {
 	private int id;
 	@Column(length = 30)
 	private String nom;
-	@OneToMany(mappedBy = "categorie")
-	private List<Film> films;
+//	@OneToMany(mappedBy = "categorie")
+//	private List<Film> films;
 }

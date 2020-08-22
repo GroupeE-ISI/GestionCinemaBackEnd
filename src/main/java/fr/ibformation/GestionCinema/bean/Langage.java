@@ -25,8 +25,8 @@ public class Langage {
 	private int id;
 	@Column(length = 30)
 	private String nom;
-	@OneToMany(mappedBy = "langage") // FKey langage_id
-	private List<Film> films;
+//	@OneToMany(mappedBy = "langage") // FKey langage_id
+//	private List<Film> films;
 	
 
 }
