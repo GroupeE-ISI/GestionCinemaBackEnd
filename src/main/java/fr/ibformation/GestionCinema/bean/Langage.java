@@ -27,6 +27,4 @@ public class Langage {
 	private String nom;
 //	@OneToMany(mappedBy = "langage") // FKey langage_id
 //	private List<Film> films;
-	
-
 }
