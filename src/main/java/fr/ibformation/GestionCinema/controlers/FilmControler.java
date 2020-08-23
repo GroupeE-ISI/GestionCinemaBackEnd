@@ -3,6 +3,7 @@ package fr.ibformation.GestionCinema.controlers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import fr.ibformation.GestionCinema.managers.FilmManager;
 
 @RestController
 @RequestMapping("/film")
+@CrossOrigin("http://localhost:4200")
 public class FilmControler {
 	
 	@Autowired
@@ -21,6 +23,11 @@ public class FilmControler {
 	
 	@GetMapping("/lister")
 	public List<Film> lister(){
+		List<Film> lists = (List<Film>) filmManager.findAll();
+		for (Film film : lists) {
+			System.out.println(film.getTitle());
+			System.out.println(film.getReleaseyear());
+		}
 		return (List<Film>) filmManager.findAll();
 	}
 

@@ -20,7 +20,7 @@ public class Categorie {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(length = 30)
-	private String nom;
+	private String name;
 //	@OneToMany(mappedBy = "categorie")
 //	private List<Film> films;
 }
