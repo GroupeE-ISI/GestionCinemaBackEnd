@@ -9,7 +9,7 @@ import org.springframework.data.rest.core.config.Projection;
 
 
 @Projection(name = "p1",types = {fr.ibformation.GestionCinema.bean.Seance.class})
-public interface Selection {
+public interface SelectionSeance {
 	public int getId();
 	public LocalDateTime getHoraire();
 	public LocalDate getDateSeance();
