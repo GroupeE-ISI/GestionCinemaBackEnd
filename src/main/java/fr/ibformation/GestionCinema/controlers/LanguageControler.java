@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.ibformation.GestionCinema.bean.Film;
-import fr.ibformation.GestionCinema.managers.FilmManager;
+import fr.ibformation.GestionCinema.bean.Langage;
+import fr.ibformation.GestionCinema.managers.LanguageManager;
 
 @RestController
-@RequestMapping("/film")
+@RequestMapping("/language")
 @CrossOrigin("http://localhost:4200")
-public class FilmControler {
+public class LanguageControler {
 	
 	@Autowired
-	private FilmManager filmManager;
+	private LanguageManager languageManager;
 	
-	@GetMapping("/lister")
-	public List<Film> lister(){
-		return (List<Film>) filmManager.findAll();
+	@GetMapping("/list")
+	public List<Langage> lister(){
+		return (List<Langage>) languageManager.findAll();
 	}
 
 	@PostMapping("/ajoutFilm")
-	public void ajoutFilm(@RequestBody Film film) {
-		filmManager.create(film);
+	public void ajoutFilm(@RequestBody Langage language) {
+		languageManager.create(language);
 	}
 }

@@ -10,8 +10,7 @@ import fr.ibformation.GestionCinema.dao.FilmDao;
 public class FilmManagerImpl implements FilmManager {
 	
 	@Autowired
-	private FilmDao filmDAO;
-	
+	private FilmDao filmDAO;	
 	
 	@Override
 	public Film create(Film film) {

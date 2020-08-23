@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.ibformation.GestionCinema.bean.Film;
-import fr.ibformation.GestionCinema.managers.FilmManager;
+import fr.ibformation.GestionCinema.bean.Categorie;
+import fr.ibformation.GestionCinema.managers.CategoryManager;
 
 @RestController
-@RequestMapping("/film")
+@RequestMapping("/category")
 @CrossOrigin("http://localhost:4200")
-public class FilmControler {
+public class CategoryControler {
 	
 	@Autowired
-	private FilmManager filmManager;
-	
-	@GetMapping("/lister")
-	public List<Film> lister(){
-		return (List<Film>) filmManager.findAll();
+	private CategoryManager categoryManager ;
+
+	@GetMapping("/list")
+	public List<Categorie> lister(){
+		return (List<Categorie>) categoryManager.findAll();
 	}
 
-	@PostMapping("/ajoutFilm")
-	public void ajoutFilm(@RequestBody Film film) {
-		filmManager.create(film);
+	@PostMapping("/addCategory")
+	public void ajoutFilm(@RequestBody Categorie Category) {
+		categoryManager.create(Category);
 	}
 }
