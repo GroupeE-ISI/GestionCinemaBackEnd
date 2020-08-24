@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import fr.ibformation.GestionCinema.bean.Film;
 
-@RepositoryRestResource
+//@RepositoryRestResource
 @CrossOrigin("*")
 public interface FilmDao extends JpaRepository<Film, Integer> {
 

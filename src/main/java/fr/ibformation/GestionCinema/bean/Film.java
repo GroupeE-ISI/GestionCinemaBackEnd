@@ -33,25 +33,25 @@ public class Film {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(length = 50)
-	private String titre;
+	@Column(name = "title")
+	private String title;
 	private String description;
 	
 	@DateTimeFormat(iso = ISO.TIME)
-	private LocalDateTime duree;
+	private LocalDateTime duration;
 	
 	@Column(length = 20)
-	private String anneeSortie;
-	private String photo;
+	private String releaseyear;
+	private String poster;
 	
 	@OneToMany(mappedBy = "film")
 	@JsonProperty(access = Access.WRITE_ONLY)
 	private List<Seance> seances;
 	@ManyToOne
-	private Categorie categorie;
+	private Categorie category;
 	
-	@ManyToMany (cascade = CascadeType.ALL)
-	private List<Acteur> acteurs;
+//	@ManyToMany (cascade = CascadeType.ALL)
+//	private List<Acteur> acteurs;
 	@ManyToOne
-	private Langage langage;
+	private Langage language;
 }

@@ -35,9 +35,9 @@ public class SalleControler {
 	}
 	
 	@GetMapping("/lister")
-	public ModelAndView lister() {
+	public List<Salle> lister() {
 		List<Salle> liste = salleManager.findAll();
-		return new ModelAndView("listerSalle", "liste", liste);
+		return liste;
 	}
 
 }
