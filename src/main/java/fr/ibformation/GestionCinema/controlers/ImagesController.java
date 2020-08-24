@@ -31,7 +31,7 @@ public class ImagesController {
 	@Autowired
 	private FilmDao filmDao;
 	@Autowired
-	private ReservationDao reservationDao;
+	private ReservationDao reservationDao; //
 	
 	@GetMapping(path="/imageFilm/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
 	public byte[] image(@PathVariable(name="id")int id) throws IOException {
