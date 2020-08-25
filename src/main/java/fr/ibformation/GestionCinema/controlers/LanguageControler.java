@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.ibformation.GestionCinema.bean.Langage;
+import fr.ibformation.GestionCinema.bean.Language;
 import fr.ibformation.GestionCinema.managers.LanguageManager;
 
 @RestController
@@ -22,12 +22,12 @@ public class LanguageControler {
 	private LanguageManager languageManager;
 	
 	@GetMapping("/list")
-	public List<Langage> lister(){
-		return (List<Langage>) languageManager.findAll();
+	public List<Language> lister(){
+		return (List<Language>) languageManager.findAll();
 	}
 
-	@PostMapping("/ajoutFilm")
-	public void ajoutFilm(@RequestBody Langage language) {
+	@PostMapping("/addmovie")
+	public void ajoutFilm(@RequestBody Language language) {
 		languageManager.create(language);
 	}
 }

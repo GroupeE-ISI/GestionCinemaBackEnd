@@ -49,9 +49,9 @@ public class Film {
 	private List<Seance> seances;
 	@ManyToOne
 	private Categorie category;
+	@ManyToOne
+	private Language language;
 	
 //	@ManyToMany (cascade = CascadeType.ALL)
 //	private List<Acteur> acteurs;
-	@ManyToOne
-	private Langage langage;
 }

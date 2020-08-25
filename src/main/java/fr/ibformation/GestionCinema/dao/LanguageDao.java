@@ -6,10 +6,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-import fr.ibformation.GestionCinema.bean.Langage;
+import fr.ibformation.GestionCinema.bean.Language;
 
 @RepositoryRestResource
-@CrossOrigin("*")
-public interface LangageDao extends JpaRepository<Langage, Integer>{
+public interface LanguageDao extends JpaRepository<Language, Integer>{
 
 }
