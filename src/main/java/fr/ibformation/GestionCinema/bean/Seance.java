@@ -12,6 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -28,14 +31,15 @@ public class Seance {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@DateTimeFormat(iso = ISO.TIME)
 	private LocalDateTime horaire;
 	private LocalDate dateSeance;
 	@ManyToOne
 	private Film film;
 	@ManyToOne
-	@JsonProperty(access = Access.WRITE_ONLY)
+	//@JsonProperty(access = Access.WRITE_ONLY)
 	private Salle salle;
-	@OneToMany(mappedBy = "seance")
-	@JsonProperty(access = Access.WRITE_ONLY)
-	private List<Reservation> reservations;
+	//@OneToMany(mappedBy = "seance")
+	//@JsonProperty(access = Access.WRITE_ONLY)
+	//private List<Reservation> reservations;
  }

@@ -31,12 +31,15 @@ public class Salle {
 	private String nom;
 	private int capacite;
 	@ManyToOne
-	@JsonProperty(access = Access.WRITE_ONLY)
+	//@JsonProperty(access = Access.WRITE_ONLY)
 	private Cinema cinema;
-	@OneToMany(mappedBy = "salle")
-	@JsonProperty(access = Access.WRITE_ONLY)
-	private List<Place> places;
-	@OneToMany(mappedBy = "salle")
-	@JsonProperty(access = Access.WRITE_ONLY)
-	private List<Seance> seances;
+	/*
+	 * @OneToMany(mappedBy = "salle")
+	 * 
+	 * @JsonProperty(access = Access.WRITE_ONLY) private List<Place> places;
+	 * 
+	 * @OneToMany(mappedBy = "salle")
+	 * 
+	 * @JsonProperty(access = Access.WRITE_ONLY) private List<Seance> seances;
+	 */
 }
