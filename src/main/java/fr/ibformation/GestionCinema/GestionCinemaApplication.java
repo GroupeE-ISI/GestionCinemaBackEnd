@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 import fr.ibformation.GestionCinema.bean.Film;
+import fr.ibformation.GestionCinema.bean.Reservation;
 
 
 @SpringBootApplication
@@ -25,7 +26,7 @@ public class GestionCinemaApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// pour afficher des id cachés
-		restConfiguration.exposeIdsFor(Film.class); 
+		restConfiguration.exposeIdsFor(Film.class, Reservation.class); 
 		
 	}
 
