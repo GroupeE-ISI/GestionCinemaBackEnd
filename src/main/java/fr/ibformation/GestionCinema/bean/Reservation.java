@@ -34,6 +34,6 @@ public class Reservation {
 	@ManyToOne// One to many ? Une réservation peut prendre plusieurs places
 	private Place place;
 	@ManyToOne
-	@JsonProperty(access = Access.WRITE_ONLY)
+	//@JsonProperty(access = Access.WRITE_ONLY)
 	private Seance seance;
 }

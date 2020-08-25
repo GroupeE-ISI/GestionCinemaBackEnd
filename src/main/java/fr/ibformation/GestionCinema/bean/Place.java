@@ -28,9 +28,9 @@ public class Place {
 	private int id;
 	private int numero;
 	@ManyToOne
-	@JsonProperty(access = Access.WRITE_ONLY)
+	//@JsonProperty(access = Access.WRITE_ONLY)
 	private Salle salle;
-	@OneToMany(mappedBy = "place")
-	@JsonProperty(access = Access.WRITE_ONLY)
-	private List<Reservation> reservations;
+	//@OneToMany(mappedBy = "place")
+	//@JsonProperty(access = Access.WRITE_ONLY)
+	//private List<Reservation> reservations;
 }

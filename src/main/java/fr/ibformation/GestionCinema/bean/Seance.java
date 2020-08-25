@@ -37,9 +37,9 @@ public class Seance {
 	@ManyToOne
 	private Film film;
 	@ManyToOne
-	@JsonProperty(access = Access.WRITE_ONLY)
+	//@JsonProperty(access = Access.WRITE_ONLY)
 	private Salle salle;
-	@OneToMany(mappedBy = "seance")
-	@JsonProperty(access = Access.WRITE_ONLY)
-	private List<Reservation> reservations;
+	//@OneToMany(mappedBy = "seance")
+	//@JsonProperty(access = Access.WRITE_ONLY)
+	//private List<Reservation> reservations;
  }

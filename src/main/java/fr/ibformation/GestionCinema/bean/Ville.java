@@ -23,6 +23,6 @@ public class Ville {
 	private int id;
 	@Column(length = 30)
 	private String nom;
-	@OneToMany(mappedBy = "ville")
-	private List<Cinema> cinemas;
+	//@OneToMany(mappedBy = "ville")
+	//private List<Cinema> cinemas;
 }
