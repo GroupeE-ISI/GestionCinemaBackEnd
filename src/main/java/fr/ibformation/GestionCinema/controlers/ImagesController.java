@@ -37,7 +37,7 @@ public class ImagesController {
 	public byte[] image(@PathVariable(name="id")int id) throws IOException {
 	
 		Film fi = filmDao.findById(id).get();
-		String nomPhoto = fi.getPhoto(); 
+		String nomPhoto = fi.getPoster(); 
 		File file = new File(System.getProperty("user.home")+"/cinema/images/"+nomPhoto);
 		Path path = Paths.get(file.toURI());
 		return Files.readAllBytes(path);
