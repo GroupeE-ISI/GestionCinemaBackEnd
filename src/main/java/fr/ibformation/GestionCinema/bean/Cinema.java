@@ -25,8 +25,8 @@ public class Cinema {
 	@Column(length = 30)
 	private String nom ;
 	private int nombreSalle;
-//	@OneToMany(mappedBy = "cinema")
-//	private List<Salle> salles ;
+	@OneToMany(mappedBy = "cinema")
+	private List<Salle> salles ;
 	@ManyToOne
 	private Ville ville;	
 }
