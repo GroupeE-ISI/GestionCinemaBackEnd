@@ -15,12 +15,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Langage {
+public class Language {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(length = 30)
-	private String nom;
+	private String name;
 //	@OneToMany(mappedBy = "langage") // FKey langage_id
 //	private List<Film> films;
 }

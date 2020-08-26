@@ -23,6 +23,7 @@ public class FilmControler {
 	
 	@GetMapping("/lister")
 	public List<Film> lister(){
+		List<Film> lists = (List<Film>) filmManager.findAll();
 		return (List<Film>) filmManager.findAll();
 	}
 

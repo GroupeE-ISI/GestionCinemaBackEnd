@@ -2,10 +2,10 @@ package fr.ibformation.GestionCinema.managers;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-import fr.ibformation.GestionCinema.bean.Langage;
+import fr.ibformation.GestionCinema.bean.Language;
 
 @CrossOrigin("*")
 public interface LanguageManager {
-	public Langage create(Langage language);
-	public Iterable<Langage> findAll();
+	public Language create(Language language);
+	public Iterable<Language> findAll();
 }
