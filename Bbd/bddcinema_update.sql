@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mar 25 Août 2020 à 14:50
+-- Généré le :  Mer 26 Août 2020 à 09:55
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -155,19 +155,19 @@ INSERT INTO `film_acteurs` (`film_id`, `acteurs_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `langage`
+-- Structure de la table `language`
 --
 
-CREATE TABLE `langage` (
+CREATE TABLE `language` (
   `id` int(11) NOT NULL,
-  `nom` varchar(30) DEFAULT NULL
+  `name` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `langage`
+-- Contenu de la table `language`
 --
 
-INSERT INTO `langage` (`id`, `nom`) VALUES
+INSERT INTO `language` (`id`, `name`) VALUES
 (1, 'Anglais'),
 (2, 'Français'),
 (3, 'Espagnol'),
@@ -464,9 +464,9 @@ ALTER TABLE `film_acteurs`
   ADD KEY `FK2c21kydg6kxp0pdrr8ox1v518` (`film_id`);
 
 --
--- Index pour la table `langage`
+-- Index pour la table `language`
 --
-ALTER TABLE `langage`
+ALTER TABLE `language`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -530,9 +530,9 @@ ALTER TABLE `cinema`
 ALTER TABLE `film`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT pour la table `langage`
+-- AUTO_INCREMENT pour la table `language`
 --
-ALTER TABLE `langage`
+ALTER TABLE `language`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `place`
@@ -574,7 +574,7 @@ ALTER TABLE `cinema`
 --
 ALTER TABLE `film`
   ADD CONSTRAINT `FK3279817n8796ys3exdnkn0l0x` FOREIGN KEY (`category_id`) REFERENCES `categorie` (`id`),
-  ADD CONSTRAINT `FK472nuunvd4qs51a2kt3uutnpe` FOREIGN KEY (`language_id`) REFERENCES `langage` (`id`);
+  ADD CONSTRAINT `FK88s9635v5hddv7cwig75m3ne2` FOREIGN KEY (`language_id`) REFERENCES `language` (`id`);
 
 --
 -- Contraintes pour la table `film_acteurs`
